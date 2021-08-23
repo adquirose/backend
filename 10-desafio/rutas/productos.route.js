@@ -3,13 +3,13 @@ import fs from 'fs'
 import { random, borrar, actualizar, existeId } from '../util'
 const router = express.Router()
 
-router.get('/listar', (req, res) => {
+router.get('/vista', (req, res) => {
     fs.promises.readFile('./productos.json')
         .then(data => {
             let productos = JSON.parse(data)
             productos.length ? 
-                res.render("main", { productos }):
-                res.json({ error: 'No hay productos cargados' })
+                res.render("main", { productos, existeProducto:true }):
+                res.render("main",{ error: true })
         }).catch(error => console.log('error al leer archivo'))
 }) //devuelve un array de productos, si no hay productos devolvera el objeto { error: 'no hay productos cargados' }
 
@@ -30,17 +30,18 @@ router.post('/guardar', (req, res) => {
     fs.promises.readFile('./productos.json')
         .then(data => {
             let productos = JSON.parse(data)
-            let { title, price } = req.body
-            if(title && price){
-                productos.push({ id:random(1,10000), title, price }) 
+            let { title, price, pathImage } = req.body
+            if(title && price && pathImage){
+                productos.push({ id:random(1,10000), title, price, pathImage }) 
                 fs.promises.writeFile('./productos.json',JSON.stringify(productos))
                     .then(() => {
-                        res.json(productos[productos.length - 1])
+                        // res.json(productos[productos.length - 1])
+                        res.redirect('/')
                         console.log('producto incorporado')
                     })
                     .catch(error => console.log('error de escritura'))
             }else{
-                res.send({error:'debes ingresar un producto con price y title'})      
+                res.send({error:'debes ingresar un producto con price, title y ruta de imagen'})      
             }
         })
         .catch(error => {})
