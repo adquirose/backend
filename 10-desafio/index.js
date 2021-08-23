@@ -9,8 +9,6 @@ app.use(express.urlencoded({extended:true}))
 app.listen('8080', () => {
     console.log('escuchando en el puerto 8080...')
 })
-
-
 // handlebars
 app.engine(
     "hbs",
@@ -26,4 +24,4 @@ app.engine(
 app.set("views", "./views")
 app.set("view engine", "hbs")
 app.use('/', express.static(__dirname + '/public')) 
-app.use('/api/productos', productos)
+app.use('/', productos)

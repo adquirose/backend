@@ -14,7 +14,7 @@ export function existeId(arr,i){
     return res
 }
 export function actualizar(obj,arr,i){
-    let nuevoObj = { id: i, title: obj.title, price:obj.price }
+    let nuevoObj = { id: i, title: obj.title, price:obj.price, pathImage: obj.pathImage }
     borrar(arr,i)
     arr.push(nuevoObj)
     return nuevoObj
