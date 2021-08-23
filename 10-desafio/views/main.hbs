@@ -1,0 +1,21 @@
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image Url</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each productos}}
+        <tr>
+            <th class="text-center" scope="row">{{id}}</th>
+            <td class="text-center">{{title}}</td>
+            <td class="text-center">{{price}}</td>
+            <td class="text-center"><img src={{thumbnail}} /></td>
+        </tr>
+      {{/each}}
+    
+  </tbody>
+</table>
