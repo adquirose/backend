@@ -1,4 +1,2 @@
-/9-desafio/node_modules
-/10-desafio/node_modules
-/10-desafio/.DS_Store
-/.DS_Store
+*/node_modules
+*.DS_Store
