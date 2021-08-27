@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 */node_modules
 *.DS_Store
+=======
+/9-desafio/node_modules
+/10-desafio/node_modules
+/10-desafio/.DS_Store
+10-desafio/views/.DS_Store
+/.DS_Store
+>>>>>>> a0075355440a6f619b4b20a3b519f9a66c894604
