@@ -9,6 +9,6 @@ app.listen('8080', () => {
     console.log('escuchando en el puerto 8080...')
 })
 app.set("views", "./views")
-app.set("view engine", "pug")
+app.set("view engine", "ejs")
 app.use('/', express.static(__dirname + '/public')) 
 app.use('/', productos)

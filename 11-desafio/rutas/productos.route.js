@@ -8,9 +8,9 @@ router.get('/vista', (req, res) => {
         .then(data => {
             let productos = JSON.parse(data)
             productos.length ? 
-                res.render('index',{ productos }):
+                res.render('pages/index',{ productos, error:false}):
                 // res.render("main", { productos, existeProducto:true }):
-                res.render("main",{ error: true })
+                res.render("pages/index",{ error: true })
         }).catch(error => console.log('error al leer archivo'))
 }) //devuelve un array de productos, si no hay productos devolvera el objeto { error: 'no hay productos cargados' }
 
