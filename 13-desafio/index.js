@@ -74,6 +74,7 @@ router.get('/productos/vista', (req, res) => {
 });
 
 let messages= []
+
 io.on('connection', socket => {
     console.log(`Cliente Conectado ${socket.id}`)
     socket.emit('productos', items.get())

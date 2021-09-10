@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Palta",
+    "description": "Tipo Hass",
+    "codigo": "TTE",
+    "thumbnail": "https://cdn0.iconfinder.com/data/icons/fruit-and-vegetable-15/200/green_avocado_sliced_fruit_vegetable-256.png",
+    "price": "5200",
+    "stock": "500",
+    "id": "59012068-8355-4d00-98df-8b9ff73f6f75",
+    "timestamp": "2021-09-09T15:14:02.010Z"
+  },
+  {
+    "name": "Limon",
+    "description": "Sutil",
+    "codigo": "TTE",
+    "thumbnail": "https://cdn0.iconfinder.com/data/icons/fruit-and-vegetable-15/200/lemon_slice_fruit_icon_fruit_vegetable-256.png",
+    "price": "3000",
+    "stock": "120",
+    "id": "680dcfae-b7e7-4ca2-9d9f-690e7448de73",
+    "timestamp": "2021-09-09T15:15:58.137Z"
+  }
+]
